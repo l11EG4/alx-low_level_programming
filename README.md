@@ -1,1 +1,5 @@
-0x00. C - Hello, World
+0x05. C - Pointers, arrays and strings
+C - Arrays
+C - Pointers
+C - Strings
+Memory Layout
