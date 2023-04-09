@@ -1,44 +1,35 @@
 #include "main.h"
 
 /**
- * char_str- a function
- * @s:  variable
- * @c: variable
- * by kilimini
- * Return: return s or NULL
- */
-
-int char_str(char *s, char c)
-{
-	unsigned int i = 0;
-
-	while (s[i])
-	{
-		if (s[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
-/**
  * _strspn - a function
- * @s:  variable
- * @accept: variable
- * by kilimini
- * Return: return s or NULL
+ * @s: string evaluate
+ * @accept: pointer contain list of char to match in s
+ * Return: number of byts
+ * by kilmini
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
+	int i, j, flag, f = 0;
 
-	unsigned int i = 0;
-
-	while (s[i])
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (!char_str(accept, s[i]))
-			break;
-		i++;
+		flag = 0;
+
+		for (j = 0; accept[j] != '\0'; j++)
+		{
+			if (s[i] == accept[j])
+			{
+				f++;
+				flag = 1;
+			}
+		}
+
+		if (flag == 0)
+		{
+			return (f);
+		}
 	}
-	return (i);
+
+	return (0);
 }
