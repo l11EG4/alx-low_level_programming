@@ -9,11 +9,9 @@
  * Return: the absolute value of int
  */
 
-int _abs(int n)
+int _abs(int a)
 {
-	if (n >= 0)
-	{
-		return (n);
-	}
-	return (-n);
+	if (a < 0)
+		return (-a);
+	return (a);
 }

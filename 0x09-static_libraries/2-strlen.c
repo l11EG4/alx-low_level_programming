@@ -2,23 +2,21 @@
 
 /**
  * _strlen - returns the length of a string
- * @s: string
+ * @s: variable
  * by kilimini
  *
- * Return: length
+ * Return: i
  */
 
 int _strlen(char *s)
 {
-	int longi = 0;
+	int i = 0;
 
-
-	while (*s != '\0')
+	if (!s)
+	return (0);
+	while (s[i])
 	{
-		longi++;
-		s++;
+		i++;
 	}
-
-
-	return (longi);
+	return (i);
 }

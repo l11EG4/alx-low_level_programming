@@ -5,10 +5,12 @@
  * @c: the character to be checked
  * by kilimini
  *
- * Return: 1 if c is a letter, 0 otherwise
+ * Return: void
  */
 
 int _isalpha(int c)
 {
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	return (0);
 }
