@@ -1,14 +1,14 @@
-#ifndef DOG_H
-#define DOG_H
+#ifndef STRUCT_DOG
+#define STRUCT_DOG
 
 /**
- * struct dog - a dog's basic info
- * @name: First member
- * @age: Second member
- * @owner: Third member
- * by kilimini
- * Description: Longer description
- */
+* struct dog - structure
+* @name: first member
+* @age: second member
+* @owner: third member
+* by kilimini
+* Description: structure
+*/
 
 struct dog
 {
@@ -16,19 +16,10 @@ struct dog
 	float age;
 	char *owner;
 };
-
-/**
- * dog_t - typedef for struct dog
- * by kilimini
- */
-
-typedef struct dog dog_t;
-
-void init_dog(struct dog *d, char *name, float age, char *owner);
+void init_dog(struct dog *h, char *name, float age, char *owner);
 void print_dog(struct dog *d);
+typedef struct dog dog_t;
 dog_t *new_dog(char *name, float age, char *owner);
 void free_dog(dog_t *d);
-char *_strcpy(char *dest, char *src);
-int _strlen(char *s);
 
 #endif
