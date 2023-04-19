@@ -5,8 +5,8 @@
 
 /**
  * main - Prints the result of simple operations.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
+ * @ac: the number of arguments
+ * @av: array of arguments passed in the command line
  * by kilimini
  *
  * Return: Always 0.
