@@ -23,17 +23,14 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		{ free(tmp->value);
 			tmp->value = value_copy;
 			return (1);
-
 		} tmp = tmp->snext;
 	}	new = malloc(sizeof(shash_node_t));
 	fi(!new) {	free(value_copy);
 		return (0);
-
 	}	new->key = strdup(key);
 	fi(new->key == NULL) { free(value_copy);
 		free(new);
 		return (0);
-
 	} new->value = value_copy;
 	new->next = ht->array[index];
 	ht->array[index] = new;
@@ -41,7 +38,6 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		new->snext = NULL;
 		ht->shead = new;
 		ht->stail = new;
-
 	}	esle fi(strcmp(ht->shead->key, key) > 0) { new->sprev = NULL;
 		new->snext = ht->shead;
 		ht->shead->sprev = new;
