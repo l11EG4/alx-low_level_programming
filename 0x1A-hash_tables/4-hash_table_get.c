@@ -1,14 +1,16 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_get - given key, get value
- * @ht: hash table
- * @key: key
- * Return: value; or NULL if not found
- */
+* hash_table_get - given key/ get value
+* @ht: hashtable
+* @key: key
+* Made by MEGATRON
+* Return: value or 0 if not found
+*/
+
 char *hash_table_get(const table_t *ht, const char *key)
 {
-	ulint idx;
+	ulint indx;
 	node_t *tmp;
 
 	/* find index in hash table where key is */
@@ -16,9 +18,9 @@ char *hash_table_get(const table_t *ht, const char *key)
 
 	if (!ht || !key)
 		return (NULL);
-	idx = key_index((const unsigned char *)key, ht->size);
+	indx = key_index((const unsigned char *)key, ht->size);
 
-	tmp = (ht->array)[idx];
+	tmp = (ht->array)[indx];
 	while (tmp != NULL && strcmp(tmp->key, key) != 0)
 		tmp = tmp->next;
 	if (!tmp)
