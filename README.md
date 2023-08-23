@@ -1,6 +1,8 @@
-0x06. C - More pointers, arrays and strings
-What are pointers and how to use them
-What are arrays and how to use them
-What are the differences between pointers and arrays
-How to use strings and how to manipulate them
-Scope of variables
+0x1C. C - Makefiles
+General
+What are make, Makefiles
+When, why and how to use Makefiles
+What are rules and how to set and use them
+What are explicit and implicit rules
+What are the most common / useful rules
+What are variables and how to set and use them
